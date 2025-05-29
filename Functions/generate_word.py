@@ -1,5 +1,6 @@
 import random
 
+
 def generate_random_word(max_length_param):
 
     vowels = 'aeiou'
@@ -8,7 +9,6 @@ def generate_random_word(max_length_param):
     word_length = random.randint(3, max_length_param)
  
     empty_word = ''
-
     begins_with_vowel = random.choice([True, False])
   
     for i in range(word_length):
@@ -17,7 +17,7 @@ def generate_random_word(max_length_param):
         else:
             empty_word += random.choice(consonants)
     
-    return empty_word
+    return print(f"Random Word: {empty_word}") 
 
 
 def generate_word_list(number_of_words_param, max_length_param):
@@ -25,4 +25,9 @@ def generate_word_list(number_of_words_param, max_length_param):
     word_list = []
     for _ in range(number_of_words_param):
         word_list.append(generate_random_word(max_length_param))
+
     return word_list
+
+
+
+
