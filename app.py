@@ -6,27 +6,36 @@ from Functions.validation_function import data_validation_in_list_words
 
 print("IMPORTANT: Minimum 3 and maximum 10 letters.")
 
-def ejecutar_programa():
+max_length = int(input("Enter the number for word length (3-10): "))
+max_list_words = int(input("Enter the number of words you need: "))
 
-    max_length = int(input("Enter the number for word length (2-9): "))
-    max_list_words = int(input("Enter the number of words you need: "))
+longitud_maxima = data_validation_in_words(max_length)
+print("Proceso de longitud maxima: ",longitud_maxima)
 
-    longitud_maxima = data_validation_in_words(max_length)
+cantidad = data_validation_in_list_words(max_list_words)
+print("Proceso de cantidad: ",cantidad)
 
-    cantidad = data_validation_in_list_words(max_list_words)
+palabras = generate_word_list(cantidad, longitud_maxima)
+print("Proceso de palabras: ",palabras)
 
-    print(f"\nGenerando {cantidad} palabra(s) con máximo {longitud_maxima} letras:\n")
+# def ejecutar_programa():
 
-    palabras = generate_word_list(cantidad, longitud_maxima)
+#     max_length = int(input("Enter the number for word length (2-9): "))
+#     max_list_words = int(input("Enter the number of words you need: "))
 
-    for i, palabra in enumerate(palabras, 1):
-        print(f"{i}. {palabra} ({len(palabra)} letras)")
+#     longitud_maxima = data_validation_in_words(max_length)
+
+#     cantidad = data_validation_in_list_words(max_list_words)
+
+#     print(f"\nGenerando {cantidad} palabra(s) con máximo {longitud_maxima} letras:\n")
+
+#     palabras = generate_word_list(cantidad, longitud_maxima)
+
+#     for i, palabra in enumerate(palabras, 1):
+#         print(f"{i}. {palabra} ({len(palabra)} letras)")
 
 
-ejecutar_programa()
-
-
-
+# ejecutar_programa()
 
 
 
